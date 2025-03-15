@@ -1,5 +1,7 @@
 "use client";
 
+
+import BubbleText from "../components/Bubbletext";
 import { useState } from "react";
 import { upload } from "../../actions/Usercontrolls";
 
@@ -10,9 +12,22 @@ export default function UpscalePage() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h1>Upload and Upscale Image</h1>
-      <form
+    <div className=" absolute left-2/6 top-1/6 text-4xl">
+      <div className="mb-20">
+      <div className="group inline-flex space-x-2">
+  <span className="hoverText transition-[font-weight,color] duration-350 group-hover:font-black group-hover:text-indigo-100">
+    Choose the
+  </span>
+  <span className="hoverText transition-[font-weight,color] duration-350 group-hover:[&:hover]:font-medium group-hover:[&:hover]:text-indigo-200">
+    File
+  </span>
+  <span className="hoverText transition-[font-weight] duration-350 group-hover:[&:hover]:font-light">
+    To upload!!
+  </span>
+</div>
+
+      </div>
+      <form 
         action={async (formData) => {
           setError(null);
           setLoading(true);
@@ -27,13 +42,17 @@ export default function UpscalePage() {
           }
         }}
       >
-        <input type="file" name="file" required accept="image/*" />
-        <button type="submit" disabled={loading}>
+        <div className="mb-3">
+        <input className=" file-input file-input-neutral"  type="file" name="file" required accept="image/*" />
+        </div>
+        <div className="mb-3 btn btn-neutral">
+        <button className="" type="submit" disabled={loading}>
           {loading ? "Processing..." : "Upload"}
         </button>
+        </div>
       </form>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="alert alert-error">{error}</p>}
 
       <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
         {uploadedImage && (

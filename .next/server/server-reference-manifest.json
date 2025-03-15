@@ -1,16 +1,5 @@
 {
   "node": {
-    "00aa9b22bc95aa4f5e01492f50a720ffcfcb7c7bc2": {
-      "workers": {
-        "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22D%3A%5C%5Cpbll%5C%5Clib%5C%5Cgetcookiestatus.js%22%2C%5B%7B%22id%22%3A%2200aa9b22bc95aa4f5e01492f50a720ffcfcb7c7bc2%22%2C%22exportedName%22%3A%22default%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/page": "rsc"
-      }
-    },
     "7f32d0aebab4527b2834d62381cc582243f143f1ef": {
       "workers": {
         "app/page": {

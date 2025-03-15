@@ -24,6 +24,7 @@
     "/upscale/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/upscale/page.css",
       "static/chunks/app/upscale/page.js"
     ]
   }

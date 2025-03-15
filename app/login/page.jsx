@@ -17,8 +17,10 @@ export default function Page() {
 
   return (
     <>
-      <form action={formstatus} className="max-w-xs mx-auto">
-        <div className="mb-3">
+
+      <form action={formstatus} className="absolute max-w-xs top-60 left-5/12 ">
+      <div className="text-2xl mb-7"><strong>Login</strong> to your account</div>
+        <div className="mb-3 ">
           <input autoComplete="off" name="username" type="text" placeholder="Username" className="input" />
         </div>
         {formss.errors?.username && (
